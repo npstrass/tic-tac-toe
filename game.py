@@ -3,11 +3,11 @@ from player import HumanPlayer, RandomComputerPlayer
 
 class TicTacToe:
     def __init__(self):
-        self.board = [' ' for _ in range(9)] # we will use a single list to rep 3x3 board
-        self.current_winner = None # keeps track of winner
+        self.board = [' ' for _ in range(9)]
+        self.current_winner = None
 
     def print_board(self):
-        for row in [self.board[i*3:(i+1)*3] for i in range(3)]: # this just gets the rows
+        for row in [self.board[i*3:(i+1)*3] for i in range(3)]:
             print('| ' + ' | '.join(row) + ' |')
 
     @staticmethod
@@ -84,6 +84,7 @@ def play(game, x_player, o_player, print_game=True):
 
     if print_game:
         print('It is a tie!')
+
 
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
